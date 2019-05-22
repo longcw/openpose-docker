@@ -1,0 +1,11 @@
+FROM openpose-base
+
+COPY openpose openpose
+
+RUN echo "Downloading and building OpenPose..." && \
+	mkdir -p /openpose/build && \
+	cd /openpose/build && \
+	cmake .. && \
+	make -j`nproc`
+
+WORKDIR /openpose
