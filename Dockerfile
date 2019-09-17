@@ -30,7 +30,8 @@ RUN echo "Installing dependencies..." && \
 	python3 -m pip install \
 	numpy \
 	protobuf \
-	opencv-python
+	opencv-python \
+	tqdm
 
 
 # RUN echo "Downloading and building OpenPose..." && \
